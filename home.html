@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <style>
+
+/* -----------------CSS  RESET----------------- */
+        *
+        {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            
+        }
+
+
+
+/* -----------------NAVBAR RELATED CODE----------------- */
+       .navbar
+        {
+            border: 2px solid #673a04;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(0, 0, 0);
+            width:fit-content;
+        }
+        #navbarElements
+        {
+            text-decoration: none;
+            /* border: 1px solid black; */
+           color: white;
+            margin: 3px 50px 3px 50px;
+            padding: 10px;
+            font-weight: bolder;
+            font-size: xx-large;
+
+        }
+        
+
+
+        #logojmi
+        {
+            /* border: 1px solid black; */
+            height: 50px;
+            margin-right: 330px;
+            filter: invert(100%);
+        }
+        #logofood
+        {
+            /* border: 1px solid black; */
+            height: 50px;
+            margin-left: 330px;
+            filter: invert(100%);
+        }
+
+        /* -----------------Body Related Code----------------- */
+
+        .body
+        {
+            border: 2px solid red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 7px;
+            justify-content: space-around;
+        }
+       .canteenContainer
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            margin: 5px;
+            flex-direction: column;
+        }
+        .canteenIMG
+        {
+            height: 270px;
+
+        }
+        
+       
+        .link
+        {
+            /* border: 2px solid red; */
+            padding: 1px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            text-decoration: none;
+        }
+       .canteenName
+        {
+            font-size: 29px;
+            color: black;
+        }
+        
+
+        /* -----------------footer Related Code----------------- */
+
+         .footer
+        {
+            border: 2px solid gold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        } 
+
+        /*-------------- feedback related code*/
+
+        
+#contact {
+background-color: #0abcf9;
+background-image: linear-gradient(50deg, #2857a4 0%, #403066 74%);
+color: white;
+padding-bottom: 40px;
+}
+
+#contact h1,
+#contact h1 span {
+color: white;
+}
+
+#contact-form {
+margin-left: 20%;
+}
+
+#contact-container {
+display: flex;
+}
+
+#my-details-container {
+width: 35%;
+margin-left: 6%;
+}
+
+#my-details-container h3 {
+color: white;
+font-weight: 550;
+font-size: 1.2rem;
+}
+
+#contact-form-container {
+width: 50%;
+}
+
+#my-details-container p {
+color: #d9dcdd;
+font-size: 0.9rem;
+}
+
+.my-details-info-container {
+margin-bottom: 20px;
+color: #d9dcdd;
+font-size: 1rem;
+}
+
+.my-details-info-container span {
+margin-left: 0.4rem;
+}
+
+.my-details-info-container i {
+color: white;
+}
+
+.my-details-icon {
+width: 1rem;
+height: 1rem;
+vertical-align: bottom;
+margin-right: 0.5rem;
+}
+
+
+#contact-form input,
+textarea {
+max-width: 90%;
+margin: 15px;
+padding: 4px 10px;
+border: 0px solid transparent;
+border-bottom: 2px solid white;
+color: #d9dcdd;
+background: transparent;
+width: 90%;
+line-height: 1.6;
+font-size: 1.05rem;
+}
+
+
+
+        
+    </style>
+</head>
+<body>
+    <!-- -----------------NAVBAR RELATED CODE----------------- -->
+    
+  <div class="navbar">
+
+        <img src="./images/LOGOjmi.jpeg" alt="JMI" id="logojmi">
+        
+        <a href="#" id="navbarElements">Home</a >
+        <a href="#" id="navbarElements">About</a>
+        <a href="#" id="navbarElements">Developers</a>
+            
+        <img src="./images/LOGOfood.jpeg" alt="JMI" id="logofood">
+
+    </div> 
+
+
+    
+
+    
+    
+
+    <!-- -----------------Body Related Code----------------- --> 
+     <div class="body">
+        
+        <div class="canteenContainer">
+
+            <img class="canteenIMG" src="./images/fet.jpeg" alt="FET">
+             <a class="link" href="/login">   
+                <p class="canteenName">FET Canteen</p>
+            </a>
+
+        </div>
+
+        <div class="canteenContainer">
+            
+            <img class="canteenIMG" src="./images/central.jpeg" alt="Central">
+            <a class="link" href="">
+                <p class="canteenName">Central Canteen</p>
+            </a>
+
+        </div>
+
+        <div class="canteenContainer">
+            
+            <img class="canteenIMG" src="./images/castro.jpeg" alt="Castro">
+            <a class="link" href="">
+                <p class="canteenName">Castro Canteen</p>
+            </a>
+
+        </div>
+ 
+    </div> 
+
+
+
+    
+    
+            
+
+    <!-- -----------------Footer Related Code----------------- -->
+
+
+    
+    <!-----for feedback contact-->
+    
+    <section id="contact">
+        <h1 class="section-heading mb50px">
+            <span>
+                <i class="far fa-address-card"></i>
+            </span>
+            <span> feedback</span>
+        </h1>
+        <div id="contact-container">
+
+            <div id="contact-form-container">
+                <form id="contact-form">
+                    <input id="input-name" name="name" type="text" placeholder="Your Name">
+                    <input id="input-email" name="input-email" type="text" required placeholder="Your Email">
+                    <textarea id="input-message" name="input-message" rows="2" cols=40 placeholder="Message"></textarea>
+                    <button class="sub-btn" type="submit">SEND MESSAGE</button>
+                </form>
+            </div>
+            <div id="my-details-container">
+
+                <h3> Get In touch  with us </h3>
+                <p> this website is design by the seven member ASAD ,IRSHAD,OSAMA,MUDABBIR,NAJMUDDIN
+                    WE will be delighted to get your feedback to make our website more promihencing and engaging; </p>
+
+                <h3> FET </h3>
+                <div class="my-details-info-container">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>JMI MILLIA ISLAMIA NEW DELHI</span>
+                </div>
+                <div class="my-details-info-container">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>9999999999</span>
+                </div>
+                <div class="my-details-info-container">
+                    <i class="far fa-envelope"></i>
+                    <span>myemail@gmail.com</span>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    
+</body>
+</html>

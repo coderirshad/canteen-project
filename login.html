@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FET</title>
+
+    <style>
+        /* -----------------CSS  RESET----------------- */
+        *
+        {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        /* ----------------- Login Window ----------------- */
+
+        .login
+        {
+            display: flex;
+            border: 2px solid red;
+            justify-content: space-between;
+            height: 150px;
+        }
+        #jmiLogo
+        {
+            height: 95px;
+            margin-top: 7px;
+        }
+        .inputContainer
+        {
+            display: flex;
+            flex-direction: column;
+            border: 2px solid black;
+            margin-right: 12px;
+        }
+        .input
+        {
+            margin: 5px 5px 5px 5px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        #loginBTN
+        {
+            padding: 6px;
+            margin: 3px 50px 0px 50px;
+            cursor: pointer;
+        }
+        .loginPara
+        {
+            border: 2px solid blue;
+            
+        }
+        .para1
+        {
+            margin-top: 15px;
+            font-size: 40px;
+
+        }
+        .para2
+        {
+            margin-top: 10px;
+            font-size: 40px;
+             margin-left: 14px;
+
+        }
+
+        /* ----------------- SignUp Window ----------------- */
+
+        .signupContainer
+        {
+            display: flex;
+            flex-direction: column;
+            margin-top: 100px;
+            border: 2px solid green;
+        }
+        .signupPara
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid red;
+        }
+        .para3
+        {
+            font-size: 40px;
+            
+        }
+        .para4
+        {
+            font-size: 40px;
+
+        }
+        .signupInput
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .submitReset
+        {
+            display: flex;
+            border: 2px solid green;
+        }
+        .signupInput span
+        {
+            color: red;
+        }
+
+
+    </style>
+    
+</head>
+<body>                                                                                  
+    
+    <!-- ----------------- Login Window ----------------- -->
+
+    <div class="login">
+
+        <a href="/">
+
+            <img src="./images/LOGOjmi.jpeg" alt="JMI" id="jmiLogo">
+
+        </a>
+
+        <div class="loginPara">
+
+            <p class="para1">Welcome to login Portal</p>
+            <p class="para2">Enter Your Credentials</p>
+
+        </div>
+
+        <form action="">
+            <div class="inputContainer">
+
+                <input type="number" name="" id="" class="input" required placeholder="Student ID">
+                <input type="password" name="" class="input" id="" required placeholder="Password">
+                <input type="submit" value="LOGIN" id="loginBTN">
+
+            </div>
+
+        </form>
+    </div>
+
+
+    <!-- ----------------- SignUp Window ----------------- -->
+
+    <div class="signupContainer">
+        <div class="signupPara">
+            <p class="para3">
+                Not Already Signed Up?
+            </p>
+            <p class="para4">Sign Up Now</p>
+        </div>
+
+        <form action="" name="signup" onsubmit="return validateForm()" method="post">
+
+                <div class="signupInput">
+                    <div id="name">
+
+                        <input type="text" name="name" id="" required placeholder="Name"><b><span class="formerror"></span></b>
+
+                    </div>
+                    <div id="faculty">
+
+                        <input type="text" name="faculty" id="" required placeholder="Faculty"><b><span class="formerror"></span></b>
+
+                    </div>
+                    <div id="department">
+
+                        <input type="text" name="department" id="" required placeholder="Department"><b><span class="formerror"></span></b>
+
+                    </div>
+                    <div id="studid">
+
+                        <input type="number" name="studid" id="" required placeholder="Student ID"><b><span class="formerror"></span></b>
+
+                    </div>
+                    <div id="number">
+
+                        <input type="number" name="number" id="" required placeholder="Mobile Number"><b><span class="formerror"></span></b>
+
+                    </div>
+                    <div id="email">
+
+                        <input type="email" name="email" id="" required placeholder="Email ID"><b><span class="formerror"></span></b>
+
+                    </div>
+                    <div id="createpass">
+
+                        <input type="password" name="createpass" id="" required placeholder="Create Password"><b><span class="formerror"></span></b>
+
+                    </div>
+                    <div id="confirmpass">
+
+                        <input type="password" name="confirmpass" id="" required placeholder="Confirm Password"><b><span class="formerror"></span></b>
+
+                    </div>
+
+
+                <div class="submitReset">
+
+                    <input type="submit" value="SUBMIT">
+                    <input type="reset" value="RESET">
+
+                </div>
+
+            </div>
+
+            </form>
+
+    </div>
+
+
+    <script>
+        function clearErrors()
+        {
+            let error=document.getElementsByClassName('formerror')
+            for(let item of error)
+            {
+                item.innerHTML="";
+            }
+
+        }
+
+        function setError(id,error)
+        {
+            let element=document.getElementById(id);
+            element.getElementsByClassName('formerror')[0].innerHTML=error;
+
+        }
+
+        function validateForm()
+        {
+            clearErrors();
+            let returnVal=true;
+
+            let name=document.forms['signup']['name'].value
+            if(name.length > 30)
+            {
+                returnVal=false;
+                setError("name","*Name Should have less than 30 characters!");
+            }
+
+            let createpass=document.forms['signup']['createpass'].value
+            let confirmpass=document.forms['signup']['confirmpass'].value
+            if(createpass.length<6)
+            {
+                setError("createpass","*Password should have more than 6 characters")
+            }
+
+            if(createpass.length>15)
+            {
+                setError("createpass","*Password should have less than 15 characters")
+            }
+
+            if(createpass != confirmpass)
+            {
+                returnVal=false;
+                setError("confirmpass","*Confirm Password is not mathcing!");
+                
+            }
+
+            let number=document.forms['signup']['number'].value
+            if(number.length >10)
+            {
+                returnVal=false;
+                setError("number","*Can not exceed 10 characters!");
+                
+            }
+
+            return returnVal
+
+        }
+    </script>
+
+
+
+    
+</body>
+</html>
